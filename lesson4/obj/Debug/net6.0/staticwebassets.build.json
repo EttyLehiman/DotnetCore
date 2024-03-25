@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "9qJUpbov09FtSgQyE/3uNYwICLt4cbvlA69M3WK6hE4=",
+  "Source": "lesson2",
+  "BasePath": "_content/lesson2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "lesson2\\wwwroot",
+      "Source": "lesson2",
+      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\css\\site.css",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\index.html",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\js\\site.js",
+      "SourceId": "lesson2",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "BasePath": "_content/lesson2",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}
