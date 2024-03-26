@@ -1,5 +1,5 @@
 const uri = '/Taskk';
-let Tasks = [];
+let Tasking = [];
 
 function getItems() {
     fetch(uri)
@@ -42,9 +42,9 @@ function deleteItem(id) {
 }
 
 function displayEditForm(id) {
-    const item = Tasks.find(item => item.Id === id);
-    console.log(item);
-    console.log("item");
+    const item = Tasking.find(item => item.id === id);
+    console.log(item+'h');
+    console.log(item.taskkName+"itemnamr");
     document.getElementById('edit-name').value = item.taskkName;
     document.getElementById('edit-id').value = item.id;
     document.getElementById('edit-isGlutenFree').checked = item.isDo;
@@ -53,13 +53,15 @@ function displayEditForm(id) {
 
 function updateItem() {
     const itemId = document.getElementById('edit-id').value;
+    console.log(itemId+"irtff");
+
     const item = {
         Id: parseInt(itemId, 10),
         IsDo: document.getElementById('edit-isGlutenFree').checked,
         TaskkName: document.getElementById('edit-name').value.trim()
     };
 
-    fetch(`${uri}`, {
+    fetch(`${uri}/${itemId}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -123,5 +125,5 @@ function _displayItems(data) {
         td4.appendChild(deleteButton);
     });
 
-    Tasks = data;
+    Tasking= data;
 }

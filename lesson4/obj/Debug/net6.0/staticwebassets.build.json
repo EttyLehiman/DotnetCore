@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9qJUpbov09FtSgQyE/3uNYwICLt4cbvlA69M3WK6hE4=",
+  "Hash": "Nc2QiPMR1TB48x5fyhabE3Xrr6PARoLgfDDB+5OhpZk=",
   "Source": "lesson2",
   "BasePath": "_content/lesson2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "lesson2\\wwwroot",
       "Source": "lesson2",
-      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\",
       "BasePath": "_content/lesson2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\css\\site.css",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\",
       "BasePath": "_content/lesson2",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\index.html",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\",
       "BasePath": "_content/lesson2",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\js\\site.js",
       "SourceId": "lesson2",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Core\\שיעורי בית\\lesson3\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\אתי תיכנות\\יד\\DotnetCore\\ניסוי\\lesson3\\wwwroot\\",
       "BasePath": "_content/lesson2",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
