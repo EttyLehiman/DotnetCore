@@ -20,9 +20,9 @@ public class MyLogMiddleware
         var sw = new Stopwatch();
         sw.Start();
         await next.Invoke(c);
-        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Logim.json");
-        File.WriteAllText(filePath, JsonSerializer.Serialize($"{c.Request.Path}.{c.Request.Method} took {sw.ElapsedMilliseconds}ms."
-        + $" User: {c.User?.FindFirst("userId")?.Value ?? "unknown"}"));
+        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Logim.txt");
+        File.AppendAllText(filePath, JsonSerializer.Serialize($"{c.Request.Path}.{c.Request.Method} took {sw.ElapsedMilliseconds}ms."
+        + $" User: {c.User?.FindFirst("userId")?.Value ?? "unknown"}"+"\n"));
     }
 }
 

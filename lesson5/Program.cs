@@ -19,8 +19,6 @@ app.Map("/favicon.ico", (a) =>
     a.Run(async c => await Task.CompletedTask));
 
 app.UseMyLogMiddleware();
-app.UseMyMiddleware();
-app.Run(async context => await context.Response.WriteAsync("our no-map terminal 2nd middleware!\n"));
 
 if (app.Environment.IsDevelopment())
 {
