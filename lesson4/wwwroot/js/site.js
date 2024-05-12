@@ -56,7 +56,7 @@ function updateItem() {
     console.log(itemId+"irtff");
 
     const item = {
-        Id: parseInt(itemId, 10),
+        Id: itemId,
         IsDo: document.getElementById('edit-isGlutenFree').checked,
         TaskkName: document.getElementById('edit-name').value.trim()
     };
