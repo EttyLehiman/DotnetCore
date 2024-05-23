@@ -9,4 +9,7 @@ namespace Taskking.Interfaces;
       int Post(Taskk newTaskk);      
       void Put(Taskk newTaskk);
       void Delete(int id,int userId);
+      void DeleteTaskUser(int userId);
+
+      
   }

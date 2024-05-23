@@ -9,7 +9,6 @@ using Taskking.Interfaces;
 using Taskking.Models;
 
 
-
 namespace Taskking.Controllers
 {
     [ApiController]
@@ -43,6 +42,8 @@ namespace Taskking.Controllers
         return CreatedAtAction(nameof(Post), new { id = newId }, newUser);
     }
     [HttpPut]
+    [Authorize(Policy = "User")]
+    [Authorize(Policy = "Admin")]
     public ActionResult Put( User newUser)
     {
          UserService.Put(newUser,userId);

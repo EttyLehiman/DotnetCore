@@ -14,26 +14,40 @@ namespace Taskking.Services
     {
         List<User>? Users { get; }
         private string? filePath;
-    public UserService(IWebHostEnvironment webHost)
+    // public UserService(IWebHostEnvironment webHost)
+    //     {
+    //         this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "User.json");
+    //         using (var jsonFile = File.OpenText(filePath))
+    //         {
+    //             Users = JsonSerializer.Deserialize<List<User>>(jsonFile.ReadToEnd(),
+    //             new JsonSerializerOptions
+    //             {
+    //                 PropertyNameCaseInsensitive = true
+    //             });
+    //         }
+    //     }
+  private readonly ITaskService taskService;
+
+        public UserService(IWebHostEnvironment webHost, ITaskService taskService)
         {
             this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "User.json");
             using (var jsonFile = File.OpenText(filePath))
             {
                 Users = JsonSerializer.Deserialize<List<User>>(jsonFile.ReadToEnd(),
-                new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
             }
+            this.taskService = taskService;
         }
-
         private void saveToFile()
         {
             File.WriteAllText(filePath, JsonSerializer.Serialize(Users));
         }
         public List<User> GetAll() => Users;
 
-      
+       
 
         public int Post(User User)
         {
@@ -58,7 +72,7 @@ namespace Taskking.Services
             var User = Users.FirstOrDefault(p => p.Id == id);
             if (User is null)
                 return;
-
+            taskService.DeleteTaskUser(id);
             Users.Remove(User);
             saveToFile();
         }

@@ -10,7 +10,7 @@ function showEdit() {
 
 function checkToken() {
     console.log("dfghjkl;");
-    const token = localStorage.getItem('token');
+    const token = local.getItem('token');
     if (!token) {
         window.location.href = 'index.html'; 
     }
@@ -186,13 +186,15 @@ if (!token) {
                     usersLink();
                 else
                 {
-                    console.log("hhhhhhh");
+                    console.log("esti");
                     const linkToUsers = document.getElementById('buttonUsers');
-                    linkToUsers.hidden = true;
+                    console.log(linkToUsers);
+                    linkToUsers.style.display = "none";
                 }
             })
             .catch()
     }
+    
     const usersLink = () => {
         const linkToUsers = document.getElementById('buttonUsers');
         linkToUsers.hidden = false;

@@ -47,7 +47,7 @@ public class TaskkController : ControllerBase
  [HttpPut("{id}")]
 public ActionResult Put(int id,Taskk newTaskk)
 {   
-    System.Console.WriteLine("ooooooooooooooooo");
+    System.Console.WriteLine(id);
     newTaskk.Id = id;
     TaskService.Put(newTaskk);
     return Ok();
@@ -61,6 +61,14 @@ public ActionResult Delete(int id)
 {
 
     TaskService.Delete(id, userId);
+    return Ok();
+}
+
+[HttpDelete]
+[Authorize(Policy = "Admin")]
+public ActionResult DeleteTaskUser(int UserId)
+{
+    TaskService.DeleteTaskUser(UserId);
     return Ok();
 }
 }

@@ -52,13 +52,21 @@ namespace Taskking.Services
             Taskkes.Remove(Taskk);
             saveToFile();
         }
+         public void DeleteTaskUser(int userId)  
+        {
+
+            Taskkes.RemoveAll(user=>user.UserId==userId);
+            saveToFile();
+        }
+        
 
         public void Put(Taskk Taskk)
         {
             var index = Taskkes.FindIndex(p => p.Id == Taskk.Id);
             if (index == -1)
                 return;
-
+             System.Console.WriteLine("index"+ index);
+             System.Console.WriteLine(Taskk.Id+"task.id"  );
             Taskkes[index] = Taskk;
             saveToFile();
         }
