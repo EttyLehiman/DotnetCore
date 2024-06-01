@@ -10,7 +10,7 @@ function showEdit() {
 
 function checkToken() {
     console.log("dfghjkl;");
-    const token = local.getItem('token');
+    const token = localStorage.getItem('token');
     if (!token) {
         window.location.href = 'index.html'; 
     }
@@ -176,6 +176,7 @@ if (!token) {
     }
 
     function IsAdmin() {
+        console.log("Ayala");
         fetch('/Admin', {
             method: 'GET',
             headers:  headers ,
@@ -188,6 +189,7 @@ if (!token) {
                 {
                     console.log("esti");
                     const linkToUsers = document.getElementById('buttonUsers');
+                    console.log("Etty Leiman");
                     console.log(linkToUsers);
                     linkToUsers.style.display = "none";
                 }

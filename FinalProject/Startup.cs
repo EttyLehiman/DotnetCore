@@ -35,7 +35,7 @@
 //                 {
 //                     cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
 //                     cfg.AddPolicy("User", policy => policy.RequireClaim("type", "User"));
-                    
+
 //                 });
 
 //             services.AddControllers();
@@ -95,6 +95,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MyMiddleware;
 using Taskking.Services;
 using Taskking.Utilities; // Add this namespace for Utilities
 
@@ -147,13 +148,11 @@ public class Startup
             });
         });
 
-        // Call the AddTaskServices method to register Task and User services
         services.AddTask();
         services.AddHttpContextAccessor();
 
     }
 
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
@@ -162,10 +161,10 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FBI v1"));
         }
-
+        app.UseMyLogMiddleware();
         app.UseHttpsRedirection();
         app.UseDefaultFiles();
-        app.UseStaticFiles();   
+        app.UseStaticFiles();
 
         app.UseRouting();
 
