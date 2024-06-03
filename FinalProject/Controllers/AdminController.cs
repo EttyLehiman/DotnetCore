@@ -13,7 +13,7 @@ namespace Taskking.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authorize(Policy = "User")]
     public class UserController : ControllerBase
 
     {
@@ -42,9 +42,7 @@ namespace Taskking.Controllers
         return CreatedAtAction(nameof(Post), new { id = newId }, newUser);
     }
     [HttpPut]
-    [Authorize(Policy = "User")]
-    [Authorize(Policy = "Admin")]
-    public ActionResult Put( User newUser)
+     public ActionResult Put( User newUser)
     {
          UserService.Put(newUser,userId);
         return Ok();

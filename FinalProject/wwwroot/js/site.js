@@ -203,6 +203,7 @@ if (!token) {
     }
     function closeInput() {
         document.getElementById('editForm').style.display = 'none';
+        console.log("tttttttttttttt");
     }
     function closeInputUser(){
         document.getElementById('editFormUser').style.display = 'none'; 

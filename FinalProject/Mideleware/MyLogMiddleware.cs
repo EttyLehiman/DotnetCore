@@ -22,7 +22,7 @@ public class MyLogMiddleware
         await next.Invoke(c);
         this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Logim.txt");
         File.AppendAllText(filePath, JsonSerializer.Serialize($"{c.Request.Path}.{c.Request.Method} took {sw.ElapsedMilliseconds}ms."
-        + $" User: {c.User?.FindFirst("userId")?.Value ?? "unknown"}" + "\n"));
+        + $" User: {c.User?.FindFirst("Name")?.Value ?? "unknown"}" + "\n"));
     }
 }
 

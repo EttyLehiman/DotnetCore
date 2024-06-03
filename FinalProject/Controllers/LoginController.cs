@@ -31,6 +31,8 @@ namespace Taskking.Controllers
                 new Claim("Id", user.Id.ToString()),
                 new Claim("Name", user.Name),
             };
+             if(user.Type=="Admin")
+                claims.Add(new Claim("type", "User"));
             var token = TokenService.GetToken(claims);
 
             return new OkObjectResult(TokenService.WriteToken(token));
